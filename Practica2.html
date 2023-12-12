@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa Potencias Fraccionales de 2</title>
+    <style>
+        table {
+            font-family: Arial, sans-serif;
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Programa Potencias Fraccionales de 2</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Potencia</th>
+                <th>Fracción</th>
+                <th>Suma</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- PHP Script para calcular y mostrar las potencias fraccionales de 2 -->
+            <?php
+                $potencia = 0;
+                $fraccion = 1;
+                $suma = 0;
+
+                while ($fraccion > 0.000001) {
+                    echo "<tr>";
+                    echo "<td>$potencia</td>";
+                    echo "<td>$fraccion</td>";
+                    echo "<td>$suma</td>";
+                    echo "</tr>";
+
+                    $potencia++;
+                    $fraccion /= 2;
+                    $suma += $fraccion;
+                }
+            ?>
+        </tbody>
+    </table>
+</body>
+</html>
